@@ -1,27 +1,83 @@
-title: no style, please! # name of the site
-author: Riccardo Graziosi # name of site's author
-email: riccardo.graziosi97@gmail.com # email of site's author
-url: https://riggraz.dev # root address of the site
-baseurl: "" # subpath of the site, e.g. "/blog" (leave it blank "" if you're site shouldn't use a subpath)
-description: > # description of the site (multiple lines allowed)
-  A (nearly) no-CSS, fast, minimalist Jekyll theme.
+# Site settings
+site: Ephesus
+title: Ephesus - Minimalist Jekyll Theme
+keywords: ephesus, blog
+description: >-
+  Ephesus - Minimalist Jekyll Theme
+lang: en-US
+timezone:  Europe/Istanbul
+repo: https://github.com/onepase/Ephesus # site repo [optional]
+google_verify:      XXX # Put your Google Verification here
+google_analytics:   UA-XXXXXXXX-00 # Put your Google Analytics code
+discus-identifier:  XXX
 
-permalink: /:slug.html
+# Author settings
+author:
+  name: Hakan Torun
+  bio: Computer Engineer @pardinus <br> Founder @zaqa <br> Open Source /#linux
+  picture: assets/images/profile.jpg 
+  github: onepase # github username
+  twitter: onepase # twitter username
+  facebook: onepase # facebook username
+  instagram: onepase # instagram username
+  youtube: https://www.youtube.com/channel/UCMmAto-wxBootXN91AzBiDg # youtube username
+  linkedin: hakantorun # linkedin username
+  email: your-email@email.com # email adress
 
-favicon: "logo.png" # name+extension of favicon (which must be put on the root folder)
-# goat_counter: "yoursitename" # put your GoatCounter name if you want to use GoatCounter analytics
 
-theme: no-style-please # if you are using GitHub Pages, change it to remote_theme: riggraz/no-style-please
+# URL settings
+url: "http://127.0.0.1:4000" # Domain Name of host. [username].github.io for github pages
+permalink: pretty
 
-theme_config:
-  appearance: "auto" # can be "light", "dark" or "auto"
-  back_home_text: ".." # customize text for homepage link in post layout
-  date_format: "%Y-%m-%d" # customize how date is formatted
-  show_description: false # show blog description in home page
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
-sass:
-  style: :compressed
+
+exclude:
+  - .jekyll-cache
+  - .obsidian
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
+  - CONTRIBUTING.md
 
 plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-relative-links
+paginate: 20
+paginate_path: "/page/:num"
+
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /:slug
+  
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+relative_links:
+  enabled:     true
+  collections: false
