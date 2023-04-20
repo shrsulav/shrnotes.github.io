@@ -13,16 +13,11 @@ discus-identifier: XXX
 
 # Author settings
 author:
-  name: Hakan Torun
-  bio: Computer Engineer @pardinus <br> Founder @zaqa <br> Open Source /#linux
+  name: Sulav Shrestha
+  bio: Embedded Software Engineer @pardinus <br> /#linux /#rtos /#embedded-systems
   picture: assets/images/profile.jpg
-  github: onepase # github username
-  twitter: onepase # twitter username
-  facebook: onepase # facebook username
-  instagram: onepase # instagram username
-  youtube: https://www.youtube.com/channel/UCMmAto-wxBootXN91AzBiDg # youtube username
-  linkedin: hakantorun # linkedin username
-  email: your-email@email.com # email adress
+  github: shrsulav # github username
+  linkedin: shrsulav # linkedin username
 
 # URL settings
 url: "" # Domain Name of host. [username].github.io for github pages
