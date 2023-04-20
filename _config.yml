@@ -20,7 +20,8 @@ author:
   linkedin: shrsulav # linkedin username
 
 # URL settings
-url: "/shrnotes.github.io" # Domain Name of host. [username].github.io for github pages
+baseurl: "/shrnotes.github.io"
+url: "https://shrsulav.github.io" # Domain Name of host. [username].github.io for github pages
 permalink: pretty
 
 markdown: kramdown
